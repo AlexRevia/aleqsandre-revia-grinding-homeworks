@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #9c0;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    height: 300px;
+}
+
+article {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+}
+
+aside {
+    width: 150px;
+    background: #fcf8e3;
+    padding: 20px;
+}
+
+nav {
+    width: 150px;
+    background: #d9ead3;
+    padding: 20px;
+}

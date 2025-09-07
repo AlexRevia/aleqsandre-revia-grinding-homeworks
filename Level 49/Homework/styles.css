@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+/* 1 */
+.hover-button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hover-button:hover {
+    background-color: red;
+}
+
+/* 2 */
+.transition-link {
+    color: green;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.transition-link:hover {
+    color: orange;
+}
+
+/* 3 */
+.scaling-image {
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.scaling-image:hover {
+    transform: scale(1.1);
+}
+
+/* 4 */
+.text-hover {
+    font-size: 20px;
+    transition: color 0.5s;
+}
+
+.text-hover:hover {
+    color: purple;
+}
+
+/* 5 */
+.border-box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    transition: border-width 0.3s;
+}
+
+.border-box:hover {
+    border-width: 6px;
+}
+
+/* 6 */
+.press-button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.press-button:active {
+    transform: scale(0.9);
+}
+
+/* 7 */
+.opacity-div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: opacity 0.5s;
+}
+
+.opacity-div:hover {
+    opacity: 0.5;
+}
+
+/* 8 */
+.padding-box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    transition: padding 0.3s;
+}
+
+.padding-box:hover {
+    padding: 20px;
+}
+
+/* 9 */
+.rotation-icon {
+    font-size: 50px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.rotation-icon:hover {
+    transform: rotate(15deg);
+}
+
+/* 10 */
+.shadow-card {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    box-shadow: 2px 2px 5px gray;
+    transition: box-shadow 0.3s;
+}
+
+.shadow-card:hover {
+    box-shadow: 5px 5px 15px black;
+}

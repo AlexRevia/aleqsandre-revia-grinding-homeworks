@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Timer and Array Tasks</title>
+  <style>
+    #movingBox {
+      width: 50px;
+      height: 50px;
+      background-color: teal;
+      position: relative;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Check the console for output</h2>
+  <div id="movingBox"></div>
+
+  <script>
+    // 1. Countdown Timer
+    let countdown = 10;
+    const countdownInterval = setInterval(() => {
+      console.log("Countdown:", countdown);
+      if (countdown === 0) {
+        clearInterval(countdownInterval);
+        console.log("Time's up!");
+      }
+      countdown--;
+    }, 1000);
+
+    // 2. Flashing Title
+    let titleToggle = true;
+    const flashInterval = setInterval(() => {
+      document.title = titleToggle ? "Hello" : "Goodbye";
+      titleToggle = !titleToggle;
+    }, 1000);
+
+    setTimeout(() => {
+      clearInterval(flashInterval);
+      document.title = "Done";
+    }, 6000);
+
+    // 3. Move a Box (DOM Task)
+    const box = document.getElementById("movingBox");
+    let moveDistance = 0;
+    const moveInterval = setInterval(() => {
+      moveDistance += 10;
+      box.style.left = moveDistance + "px";
+      if (moveDistance >= 100) {
+        clearInterval(moveInterval);
+      }
+    }, 200);
+
+    // 4. Random Number Logger
+    let randomCount = 0;
+    const randomInterval = setInterval(() => {
+      const rand = Math.floor(Math.random() * 10) + 1;
+      console.log("Random Number:", rand);
+      randomCount++;
+      if (randomCount >= 5) {
+        clearInterval(randomInterval);
+      }
+    }, 1500);
+
+    // 5. Array to Uppercase
+    const words = ["apple", "banana", "grape"];
+    for (let i = 0; i < words.length; i++) {
+      console.log(words[i].toUpperCase());
+    }
+
+    // 6. Replace Middle Element
+    const nums = [1, 2, 3];
+    nums[1] = 0;
+    console.log("Replaced middle element:", nums);
+
+    // 7. Add and Remove Elements
+    const fruits = ["orange", "melon"];
+    fruits.push("kiwi");        // add to end
+    fruits.unshift("peach");    // add to beginning
+    fruits.pop();               // remove last
+    console.log("Modified array:", fruits);
+
+    // 8. Average of Array
+    const values = [4, 8, 6, 2];
+    const sum = values.reduce((acc, val) => acc + val, 0);
+    const average = sum / values.length;
+    console.log("Average:", average);
+
+    // 9. Reverse Array Manually
+    const arr = ["one", "two", "three"];
+    console.log("Manual Reverse:");
+    for (let i = arr.length - 1; i >= 0; i--) {
+      console.log(arr[i]);
+    }
+
+    // 10. Loop with Index
+    const items = ["apple", "banana", "cherry", "date", "fig"];
+    for (let i = 0; i < items.length; i++) {
+      console.log(`Index ${i}: ${items[i]}`);
+    }
+
+  </script>
+</body>
+</html>

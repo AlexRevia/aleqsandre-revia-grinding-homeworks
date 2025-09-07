@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>goa homework</title>
+        <style>
+            #box {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="header">Header</h1>
+        <p id="description">description</p>
+        <footer id="footer">Footer</footer>
+        <h2 id="title">Title</h2>
+        <div id="greeting">Hello</div>
+        <p id="note">note</p>
+        <h3 id="heading">Heading</h3>
+        <div id="box">Box</div>
+        <p id="paragraph">paragraph.</p>
+
+    <script>
+        // 2)
+        let headerElement = document.getElementById("header");
+
+        // 3)
+        let descriptionElement = document.getElementById("description");
+
+        // 4)
+        let footerElement = document.getElementById("footer");
+
+        // 5)
+        let titleText = document.getElementById("title").textContent;
+
+        // 6)
+        document.getElementById("greeting").textContent = "Welcome";
+
+        // 7)
+        document.getElementById("note").textContent = "";
+
+        // 8)
+        document.getElementById("heading").style.color = "red";
+
+        // 9)
+        document.getElementById("box").style.backgroundColor = "yellow";
+
+        // 10)
+        document.getElementById("paragraph").style.fontSize = "20px";
+    </script>
+    
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timer Tasks</title>
+</head>
+<body>
+  <h2>Open your browser console to see the timer logs</h2>
+
+  <script>
+    // 1. Log numbers 1 to 5 every second
+    let counter1 = 1;
+    const interval1 = setInterval(() => {
+      console.log("Counter 1:", counter1);
+      counter1++;
+      if (counter1 > 5) {
+        clearInterval(interval1);
+      }
+    }, 1000);
+
+    // 2. Display message every 2 seconds, stop after 10 seconds
+    const interval2 = setInterval(() => {
+      console.log("Hello every 2 seconds");
+    }, 2000);
+
+    setTimeout(() => {
+      clearInterval(interval2);
+      console.log("Stopped interval after 10 seconds");
+    }, 10000);
+
+    // 3. Change background color every 3 seconds, stop after 5 changes
+    const colors = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lightgray"];
+    let colorIndex = 0;
+    const interval3 = setInterval(() => {
+      document.body.style.backgroundColor = colors[colorIndex];
+      colorIndex++;
+      if (colorIndex >= 5) {
+        clearInterval(interval3);
+        console.log("Stopped background color changes after 5 times");
+      }
+    }, 3000);
+
+    // 4. Display current time every second, stop after 15 seconds
+    const interval4 = setInterval(() => {
+      console.log("Time:", new Date().toLocaleTimeString());
+    }, 1000);
+
+    setTimeout(() => {
+      clearInterval(interval4);
+      console.log("Stopped time logging after 15 seconds");
+    }, 15000);
+
+    // 5. Simple timer that counts up to 10 seconds
+    let timerCount = 0;
+    const timer = setInterval(() => {
+      timerCount++;
+      console.log("Timer Count:", timerCount);
+      if (timerCount >= 10) {
+        clearInterval(timer);
+        console.log("Timer stopped at 10 seconds");
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

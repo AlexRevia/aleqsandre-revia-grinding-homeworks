@@ -1,0 +1,45 @@
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    position: relative;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.red {
+    background-color: red;
+    top: 0;
+    left: 0;
+}
+
+.green {
+    background-color: green;
+    top: 0;
+    right: 0;
+}
+
+.blue {
+    background-color: blue;
+    bottom: 0;
+    left: 0;
+}
+
+.purple {
+    background-color: purple;
+    bottom: 0;
+    right: 0;
+}
+
+.footer {
+    width: 120px;
+    height: 120px;
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

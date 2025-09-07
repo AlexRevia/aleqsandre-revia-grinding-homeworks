@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Homework Assignments</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: purple;
+      position: relative;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Elements for Homework 1 -->
+  <h1>Title One</h1>
+  <h3>Subtitle One</h3>
+  <h1>Title Two</h1>
+  <h3>Subtitle Two</h3>
+
+  <!-- Elements for Homework 2 -->
+  <p>This is a paragraph with several words in it for counting purposes.</p>
+  <p>Another shorter one.</p>
+
+  <!-- Elements for Homework 3 -->
+  <img src="https://via.placeholder.com/150" alt="a dog">
+  <img src="https://via.placeholder.com/150" alt="a cat image">
+
+  <!-- Elements for Homework 5 -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+  <!-- Elements for Homework 7 -->
+  <input type="text" placeholder="Type up to 20 chars">
+  <input type="text" placeholder="Try typing more...">
+
+  <script>
+    // ✅ Homework 1: Heading Formatter
+    document.querySelectorAll("h1, h3").forEach(el => {
+      el.style.color = "green";
+      el.style.border = "1px solid black";
+      el.style.padding = "5px";
+      el.style.fontSize = el.tagName === "H1" ? "30px" : "24px";
+    });
+
+    // ✅ Homework 2: Paragraph Word Counter
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach((p, index) => {
+      const wordCount = p.textContent.trim().split(/\s+/).length;
+      console.log(`Paragraph ${index + 1} has ${wordCount} words`);
+    });
+
+    // ✅ Homework 3: Image Gallery Resize
+    document.querySelectorAll("img").forEach(img => {
+      img.style.width = "200px";
+      img.style.borderRadius = "10px";
+      img.style.border = "3px solid transparent";
+      if (img.alt.toLowerCase().includes("cat")) {
+        img.style.borderColor = "orange";
+      }
+    });
+
+    // ✅ Homework 4: Animate Circles
+    for (let i = 0; i < 3; i++) {
+      const circle = document.createElement("div");
+      circle.className = "circle";
+      document.body.appendChild(circle);
+
+      let pos = 0;
+      const interval = setInterval(() => {
+        pos += 10;
+        circle.style.left = pos + "px";
+        if (pos >= 200) clearInterval(interval);
+      }, 200);
+    }
+
+    // ✅ Homework 5: List Alternating Color
+    document.querySelectorAll("li").forEach((li, index) => {
+      li.style.backgroundColor = index % 2 === 0 ? "skyblue" : "lightgray";
+    });
+
+    // ✅ Homework 6: Interactive Box Movement
+    const moveBox = document.createElement("div");
+    moveBox.style.width = "100px";
+    moveBox.style.height = "100px";
+    moveBox.style.backgroundColor = "green";
+    moveBox.style.position = "relative";
+    moveBox.style.marginTop = "20px";
+    document.body.appendChild(moveBox);
+
+    const moveBtn = document.createElement("button");
+    moveBtn.textContent = "Move Box";
+    document.body.appendChild(moveBtn);
+
+    let boxLeft = 0;
+    moveBtn.addEventListener("click", () => {
+      boxLeft += 20;
+      moveBox.style.left = boxLeft + "px";
+      moveBox.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    });
+
+    // ✅ Homework 7: Form Input Length Warning
+    document.querySelectorAll('input[type="text"]').forEach(input => {
+      input.addEventListener("input", () => {
+        input.style.backgroundColor = input.value.length > 20 ? "red" : "white";
+      });
+    });
+
+    // ✅ Homework 8: Dynamic Message List
+    const msgList = document.createElement("ul");
+    document.body.appendChild(msgList);
+
+    let msgCount = 0;
+    const msgInterval = setInterval(() => {
+      msgCount++;
+      const li = document.createElement("li");
+      li.textContent = `Message ${msgCount}`;
+      msgList.appendChild(li);
+      if (msgCount === 10) clearInterval(msgInterval);
+    }, 2000);
+
+    // ✅ Homework 9: Hide and Reveal
+    const hideBox = document.createElement("div");
+    hideBox.textContent = "Hide me!";
+    hideBox.style.width = "200px";
+    hideBox.style.height = "50px";
+    hideBox.style.backgroundColor = "pink";
+    hideBox.style.textAlign = "center";
+    hideBox.style.lineHeight = "50px";
+    hideBox.style.marginTop = "20px";
+    document.body.appendChild(hideBox);
+
+    const hideBtn = document.createElement("button");
+    hideBtn.textContent = "Hide Box";
+    document.body.appendChild(hideBtn);
+
+    hideBtn.addEventListener("click", () => {
+      hideBox.style.display = "none";
+      setTimeout(() => {
+        hideBox.style.display = "block";
+      }, 5000);
+    });
+
+    // ✅ Homework 10: Element Counter by Tag
+    setTimeout(() => {
+      const tag = prompt("Enter a tag name to count (e.g., div, p, img):");
+      if (tag) {
+        const count = document.getElementsByTagName(tag).length;
+        alert(`There are ${count} <${tag}> element(s) on the page.`);
+      }
+    }, 1000); // Delay so it doesn't interrupt the page load
+  </script>
+
+</body>
+</html>

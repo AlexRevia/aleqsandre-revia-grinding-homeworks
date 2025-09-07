@@ -1,0 +1,55 @@
+<html>
+    <title>Keyframes & Animation Basics</title>
+    <style>
+        @keyframes moveRight {
+        from { transform: translateX(0); }
+        to { transform: translateX(200px); }
+        }
+        .box1 {
+        width: 100px; height: 100px; background: green;
+        animation: moveRight 2s linear;
+        }
+
+        @keyframes bgChange {
+        from { background-color: blue; }
+        to { background-color: red; }
+        }
+        .box2 {
+        width: 100px; height: 100px; 
+        animation: bgChange 5s linear forwards;
+        }
+
+        @keyframes rotate360 {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+        }
+    .box3 {
+            width: 100px; height: 100px; background: purple;
+            animation: rotate360 2s linear;
+        }
+
+    @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .box4 {
+            width: 100px; height: 100px; background: orange;
+            animation: pulse 1s ease-in-out infinite;
+        }
+    </style>
+    </head>
+
+    <body>
+        <h2>1. Move a box from left to right</h2>
+        <div class="box1"></div>
+
+        <h2>2. Background color from blue to red</h2>
+        <div class="box2"></div>
+
+        <h2>3. Rotate 360 degrees</h2>
+        <div class="box3"></div>
+
+        <h2>4. Pulse effect</h2>
+        <div class="box4"></div>
+    </body>
+</html>

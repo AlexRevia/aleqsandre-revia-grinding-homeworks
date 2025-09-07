@@ -1,0 +1,8 @@
+h1 {
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: 3px solid black;
+}

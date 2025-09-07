@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>goa classwork</title>
+        <style>
+            .parent {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                padding: 10px;
+                background-color: #f0f0f0;
+            }
+
+            .child {
+                flex: 1;
+                height: 100px;
+                background-color: #3498db;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @media screen and (max-width: 800px) {
+                .parent {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child">block 1</div>
+            <div class="child">block 2</div>
+            <div class="child">block 3</div>
+        </div>
+    </body>
+</html>

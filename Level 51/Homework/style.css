@@ -1,0 +1,32 @@
+body {
+    background: #666;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 20px;
+    position: relative;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+.top-left     { top: 20px; left: 20px; }
+.top-right    { top: 20px; right: 20px; }
+.bottom-left  { bottom: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }
+.center-left  { top: 50%; left: 20px; transform: translateY(-50%); }
+.center-right { top: 50%; right: 20px; transform: translateY(-50%); }

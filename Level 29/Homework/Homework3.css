@@ -1,0 +1,18 @@
+h1, p, button {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: blue;
+    text-align: center;
+}
+
+button {
+    background-color: lightgray;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gray;
+    color: white;
+}

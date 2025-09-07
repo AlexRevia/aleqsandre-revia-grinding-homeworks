@@ -1,0 +1,51 @@
+/* RGB color model */
+#para1 {
+    color: rgb(255, 0, 0);
+    background-color: rgb(240, 240, 240);
+}
+
+#para2 {
+    color: rgb(0, 255, 0);
+    background-color: rgb(220, 220, 220);
+}
+
+#para3 {
+    color: rgb(0, 0, 255);
+    background-color: rgb(200, 200, 200);
+}
+
+#para4 {
+    color: rgb(255, 255, 0);
+    background-color: rgb(180, 180, 180);
+}
+
+#para5 {
+    color: rgb(255, 0, 255);
+    background-color: rgb(160, 160, 160);
+}
+
+/* HEX color model */
+#para6 {
+    color: #ff5733;
+    background-color: #f2f2f2;
+}
+
+#para7 {
+    color: #33ff57;
+    background-color: #e6e6e6;
+}
+
+#para8 {
+    color: #3357ff;
+    background-color: #d9d9d9;
+}
+
+#para9 {
+    color: #ff33a1;
+    background-color: #cccccc;
+}
+
+#para10 {
+    color: #a133ff;
+    background-color: #bfbfbf;
+}

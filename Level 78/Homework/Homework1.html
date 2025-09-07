@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM Selection and Manipulation</title>
+  <style>
+    .highlight { padding: 5px; }
+    .card { margin: 10px; }
+    .error { font-weight: bold; }
+    .item { margin: 5px; }
+    .button { padding: 5px 10px; background-color: #ccc; border: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Example elements -->
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+
+  <h2>Heading 1</h2>
+  <h2>Heading 2</h2>
+
+  <ul>
+    <li>List Item A</li>
+    <li>List Item B</li>
+    <li>List Item C</li>
+  </ul>
+
+  <div>Div 1</div>
+  <div class="highlight">Div 2</div>
+  <div class="card">Div 3</div>
+
+  <img src="https://via.placeholder.com/100" alt="Placeholder Image" />
+
+  <div class="highlight">Highlight 1</div>
+  <div class="highlight">Highlight 2</div>
+
+  <div class="card">Card 1</div>
+  <div class="card">Card 2</div>
+
+  <div class="error">Error message 1</div>
+  <div class="error">Error message 2</div>
+
+  <div class="item">Item A</div>
+  <div class="item">Item B</div>
+  <div class="item">Item C</div>
+
+  <button class="button">Original</button>
+
+  <script>
+    // 2. Select all <p> tags and alert count
+    const paragraphs = document.querySelectorAll("p");
+    alert("Total <p> tags: " + paragraphs.length);
+
+    // 3. Change all <h2> text color to blue
+    document.querySelectorAll("h2").forEach(h2 => {
+      h2.style.color = "blue";
+    });
+
+    // 4. Log text content of all <li> elements
+    document.querySelectorAll("li").forEach(li => {
+      console.log("List item:", li.textContent);
+    });
+
+    // 5. Set background of all <div>s to lightgray
+    document.querySelectorAll("div").forEach(div => {
+      div.style.backgroundColor = "lightgray";
+    });
+
+    // 6. Change src of first <img> tag
+    const firstImg = document.querySelector("img");
+    if (firstImg) {
+      firstImg.src = "https://via.placeholder.com/150";
+    }
+
+    // 7. Change background of elements with class "highlight" to yellow
+    document.querySelectorAll(".highlight").forEach(el => {
+      el.style.backgroundColor = "yellow";
+    });
+
+    // 8. Count elements with class "card"
+    const cards = document.querySelectorAll(".card");
+    console.log("Number of elements with class 'card':", cards.length);
+
+    // 9. Set text color of elements with class "error" to red
+    document.querySelectorAll(".error").forEach(el => {
+      el.style.color = "red";
+    });
+
+    // 10. Log innerHTML of elements with class "item"
+    document.querySelectorAll(".item").forEach(el => {
+      console.log("Item innerHTML:", el.innerHTML);
+    });
+
+    // 11. Change text of first element with class "button"
+    const firstButton = document.querySelector(".button");
+    if (firstButton) {
+      firstButton.textContent = "Clicked!";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Duration & Delay</title>
+        <style>
+        @keyframes slideIn {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+        }
+        .delayedBox {
+        width: 100px; height: 100px; background: brown;
+        animation: slideIn 2s ease-out 2s forwards;
+        }
+
+        @keyframes popUp {
+        from { opacity: 0; transform: scale(0); }
+        to { opacity: 1; transform: scale(1); }
+        }
+        .seq1, .seq2, .seq3 {
+        width: 60px; height: 60px; margin: 5px;
+        background: teal; display: inline-block;
+        animation: popUp 1s ease-out forwards;
+        }
+        .seq2 { animation-delay: 1s; }
+        .seq3 { animation-delay: 2s; }
+
+        @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+        }
+        .fadeBox {
+        width: 100px; height: 100px; background: pink;
+        animation: fadeOut 10s linear forwards;
+        }
+        </style>
+    </head>
+    <body>
+        <h2>9. Delayed start (2s after load)</h2>
+        <div class="delayedBox"></div>
+
+        <h2>10. Sequence animation using delay</h2>
+        <div class="seq1"></div>
+        <div class="seq2"></div>
+        <div class="seq3"></div>
+
+        <h2>11. Fading effect for 10 seconds</h2>
+        <div class="fadeBox"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.parent-div {
+    width: 70%;
+    height: 600px;
+    background-color: #FFCC00;
+}
+
+.child-div {
+    width: 25%;
+    height: 10%; 
+    background-color: #00CCFF;
+}

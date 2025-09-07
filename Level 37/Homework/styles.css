@@ -1,0 +1,33 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+
+li::before {
+    content: "✨";
+    position: absolute;
+    left: 0;
+}
+
+
+li:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+
+li:nth-child(3n) {
+    color: crimson;
+}
+
+
+li:first-child,
+li:last-child {
+    font-weight: bold;
+}

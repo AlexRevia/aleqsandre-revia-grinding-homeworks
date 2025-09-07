@@ -1,0 +1,3 @@
+სულ არსებობს inline javascript ანუ პირდაპირ ატრიბუტში წერა
+inetrnal javascript ანუ style თეგში წერა
+და ბოლოს external javascript ანუ ცალკე ფაილი

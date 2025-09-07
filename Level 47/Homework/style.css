@@ -1,0 +1,105 @@
+/* 1 */
+.center-div {
+    width: 50%;
+    margin: 0 auto;
+    background: lightgray;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 2 */
+.right-image {
+    display: block;
+    margin-left: auto;
+    width: 200px;
+}
+
+/* 3 */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 4 */
+.button-container {
+    position: relative;
+    height: 200px;
+    background: lightblue;
+}
+.bottom-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 5 */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+/* 6 */
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 7 */
+.move-up {
+    position: relative;
+    top: -10px;
+    background: yellow;
+    padding: 10px;
+}
+
+/* 8 */
+.side-by-side-container {
+    display: flex;
+    gap: 10px;
+}
+.box {
+    width: 50%;
+    background: green;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 9 */
+.float-left {
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+}
+
+/* 10 */
+.space-container {
+    display: flex;
+    justify-content: space-between;
+}
+.space-box {
+    background: coral;
+    padding: 20px;
+    width: 45%;
+}

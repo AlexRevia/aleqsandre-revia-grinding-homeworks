@@ -1,0 +1,49 @@
+
+#p1 {
+    text-align: left;
+    text-decoration: underline dashed #1a73e8;
+}
+
+#p2 {
+    text-align: center;
+    text-decoration: line-through #d32f2f;
+}
+
+#p3 {
+    text-decoration: overline double red;
+}
+
+#p4 {
+    text-align: center;
+    text-decoration: underline #f57c00;
+}
+
+#p5 {
+    text-align: right;
+    text-decoration: line-through dotted #8e24aa;
+}
+
+#p6 {
+    text-decoration: line-through gray;
+}
+
+#p7 {
+    text-decoration: overline #43a047;
+}
+
+#p8 {
+    text-align: left;
+    color: #1e88e5;
+    text-decoration: overline;
+}
+
+#p9 {
+    text-transform: uppercase;
+    color: gray;
+    text-decoration: overline gray;
+}
+
+#p10 {
+    text-align: right;
+    text-decoration: underline dashed #e53935;
+}
