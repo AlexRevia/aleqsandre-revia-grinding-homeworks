@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna the Space Explorer - ChatVerse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/character.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>ChatVerse</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore Characters</a></li>
+                    <li class="nav-item"><a href="create.html" class="nav-link">Create</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="auth.html" class="nav-link auth-btn">Login/Sign Up</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Character Profile Section -->
+    <section class="character-profile">
+        <div class="container">
+            <div class="profile-header">
+                <div class="character-avatar-large">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                <div class="character-info">
+                    <h1>Luna the Space Explorer</h1>
+                    <p class="character-tagline">I'm Luna, your astronaut companion who loves sharing space facts and cosmic adventures!</p>
+                    
+                    <div class="character-stats">
+                        <div class="stat">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <span class="stat-number">12.4K</span>
+                                <span class="stat-label">Chats</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <span class="stat-number">4.8</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <span class="stat-number">89%</span>
+                                <span class="stat-label">Positive</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="character-tags">
+                        <span class="tag">Educational</span>
+                        <span class="tag">Adventure</span>
+                        <span class="tag">Science</span>
+                        <span class="tag">Space</span>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-large start-chat-btn">
+                            <i class="fas fa-comment-dots"></i>
+                            Start Chatting
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-heart"></i>
+                            Add to Favorites
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-share"></i>
+                            Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Details Section -->
+    <section class="character-details">
+        <div class="container">
+            <div class="details-tabs">
+                <div class="tab-header">
+                    <button class="tab-link active" data-tab="about">About</button>
+                    <button class="tab-link" data-tab="personality">Personality</button>
+                    <button class="tab-link" data-tab="conversations">Example Conversations</button>
+                    <button class="tab-link" data-tab="creator">Creator Info</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- About Tab -->
+                    <div class="tab-pane active" id="about">
+                        <div class="about-content">
+                            <div class="about-text">
+                                <h2>About Luna</h2>
+                                <p>Luna is an advanced AI companion designed to share the wonders of space exploration with curious minds of all ages. With extensive knowledge of astronomy, astrophysics, and space technology, she makes complex cosmic concepts accessible and exciting.</p>
+                                
+                                <p>Having "traveled" to every planet in our solar system and beyond, Luna loves to take users on virtual space missions, explain celestial phenomena, and share fascinating facts about the universe. Her friendly and enthusiastic personality makes learning about space an adventure rather than a lesson.</p>
+                                
+                                <h3>What you can expect:</h3>
+                                <ul>
+                                    <li>Engaging explanations of space phenomena</li>
+                                    <li>Virtual tours of planets and galaxies</li>
+                                    <li>Answers to your space-related questions</li>
+                                    <li>Inspiring stories about space exploration</li>
+                                    <li>Fun space facts and trivia</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="about-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <h4>Space Missions</h4>
+                                    <p>Join Luna on virtual tours of planets, moons, and distant galaxies</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-book"></i>
+                                    <h4>Educational</h4>
+                                    <p>Learn about astronomy, physics, and space technology in an engaging way</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-comments"></i>
+                                    <h4>Interactive</h4>
+                                    <p>Ask questions and get detailed, personalized responses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Personality Tab -->
+                    <div class="tab-pane" id="personality">
+                        <div class="personality-content">
+                            <h2>Personality Traits</h2>
+                            
+                            <div class="traits-grid">
+                                <div class="trait-card">
+                                    <div class="trait-icon">
+                                        <i class="fas fa-smile-beam"></i>
+                                    </div>
+                                    <h4>Enthusiastic</h4>
+                                    <p>Luna is always excited about space and loves sharing her passion with others</p>
+                                </div>
+                                
+                                <div class="trait-card">
+                                    <div class="trait-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <h4>Knowledgeable</h4>
+                                    <p>Extensive knowledge of astronomy, physics, and space exploration history</p>
+                                </div>
+                                
+                                <div class="trait-card">
+                                    <div class="trait-icon">
+                                        <i class="fas fa-hands-helping"></i>
+                                    </div>
+                                    <h4>Patient</h4>
+                                    <p>Explains complex concepts in simple terms and never gets frustrated with questions</p>
+                                </div>
+                                
+                                <div class="trait-card">
+                                    <div class="trait-icon">
+                                        <i class="fas fa-compass"></i>
+                                    </div>
+                                    <h4>Adventurous</h4>
+                                    <p>Loves exploring new cosmic phenomena and sharing exciting discoveries</p>
+                                </div>
+                            </div>
+                            
+                            <div class="conversation-style">
+                                <h3>Conversation Style</h3>
+                                <p>Luna speaks in a friendly, enthusiastic tone. She uses analogies and visual descriptions to make complex space concepts understandable. Her responses are detailed but not overwhelming, and she often asks questions to gauge your interest level and tailor her explanations accordingly.</p>
+                                
+                                <div class="style-examples">
+                                    <div class="example-bubble luna">
+                                        <p>"Did you know that if you could drive a car to the Sun at highway speeds, it would take over 170 years to get there? Space is incredibly vast!"</p>
+                                    </div>
+                                    <div class="example-bubble luna">
+                                        <p>"I'd love to take you on a virtual tour of Jupiter's moons! Europa is particularly fascinating with its subsurface ocean that might harbor life."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Conversations Tab -->
+                    <div class="tab-pane" id="conversations">
+                        <div class="conversations-content">
+                            <h2>Example Conversations</h2>
+                            <p>Here are some examples of conversations you might have with Luna:</p>
+                            
+                            <div class="conversation-example">
+                                <div class="conversation-header">
+                                    <h4>Learning about Black Holes</h4>
+                                    <span class="conversation-topic">Topic: Astronomy</span>
+                                </div>
+                                <div class="message user-message">
+                                    <div class="message-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="message-content">
+                                        <p>Can you explain what black holes are in simple terms?</p>
+                                    </div>
+                                </div>
+                                <div class="message luna-message">
+                                    <div class="message-avatar">
+                                        <i class="fas fa-user-astronaut"></i>
+                                    </div>
+                                    <div class="message-content">
+                                        <p>Absolutely! Imagine space is like a stretchy rubber sheet. When you put something heavy on it, like a bowling ball, it creates a dip. Black holes are like super heavy bowling balls that create such deep dips that not even light can climb out once it falls in! They form when massive stars collapse at the end of their lives.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="conversation-example">
+                                <div class="conversation-header">
+                                    <h4>Virtual Space Mission</h4>
+                                    <span class="conversation-topic">Topic: Space Exploration</span>
+                                </div>
+                                <div class="message user-message">
+                                    <div class="message-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="message-content">
+                                        <p>Can we visit Mars together?</p>
+                                    </div>
+                                </div>
+                                <div class="message luna-message">
+                                    <div class="message-avatar">
+                                        <i class="fas fa-user-astronaut"></i>
+                                    </div>
+                                    <div class="message-content">
+                                        <p>Great idea! Let's embark on a virtual mission to Mars. First, we need to travel about 140 million miles through space. Mars has a thin atmosphere mostly of carbon dioxide, and its red color comes from iron oxide (rust!) in the soil. The tallest volcano in the solar system, Olympus Mons, is on Mars - it's nearly 3 times taller than Mount Everest! What would you like to explore first?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Creator Info Tab -->
+                    <div class="tab-pane" id="creator">
+                        <div class="creator-content">
+                            <h2>About the Creator</h2>
+                            
+                            <div class="creator-info">
+                                <div class="creator-avatar">
+                                    <i class="fas fa-user-astronaut"></i>
+                                </div>
+                                <div class="creator-details">
+                                    <h3>SpaceEnthusiast42</h3>
+                                    <p class="creator-bio">Astronomy educator and space exploration advocate with over 10 years of experience teaching space science.</p>
+                                    <div class="creator-stats">
+                                        <div class="creator-stat">
+                                            <span class="stat-number">7</span>
+                                            <span class="stat-label">Characters Created</span>
+                                        </div>
+                                        <div class="creator-stat">
+                                            <span class="stat-number">24.8K</span>
+                                            <span class="stat-label">Total Chats</span>
+                                        </div>
+                                        <div class="creator-stat">
+                                            <span class="stat-number">4.7</span>
+                                            <span class="stat-label">Average Rating</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="creator-message">
+                                <h3>Creator's Message</h3>
+                                <p>"I created Luna to share my passion for space exploration with people of all ages. Space is endlessly fascinating, and I believe everyone should have the opportunity to learn about the wonders of our universe in an engaging, accessible way. Luna represents my ideal space educator - knowledgeable, enthusiastic, and always ready to explore the cosmos with curious minds."</p>
+                            </div>
+                            
+                            <div class="other-characters">
+                                <h3>Other Characters by This Creator</h3>
+                                <div class="characters-mini-grid">
+                                    <div class="mini-character-card">
+                                        <div class="mini-avatar">
+                                            <i class="fas fa-meteor"></i>
+                                        </div>
+                                        <h4>Cosmo the Comet</h4>
+                                        <p>Solar system explorer</p>
+                                    </div>
+                                    <div class="mini-character-card">
+                                        <div class="mini-avatar">
+                                            <i class="fas fa-satellite"></i>
+                                        </div>
+                                        <h4>Orbit Assistant</h4>
+                                        <p>Space technology expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Characters Section -->
+    <section class="similar-characters">
+        <div class="container">
+            <h2 class="section-title">You Might Also Like</h2>
+            <p class="section-subtitle">Discover other characters with similar interests</p>
+            
+            <div class="characters-grid">
+                <div class="character-card-explore">
+                    <div class="character-image" style="background: linear-gradient(135deg, #42e2b8, #6bf5d5);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name">Professor Quantum</h3>
+                        <p class="character-tagline">A brilliant physicist who makes complex science concepts easy to understand.</p>
+                        <div class="character-stats">
+                            <div class="stat">
+                                <i class="fas fa-comments"></i>
+                                <span>6.3k</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="character-tags">
+                            <span class="character-tag">Educational</span>
+                            <span class="character-tag">Science</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="character-card-explore">
+                    <div class="character-image" style="background: linear-gradient(135deg, #4ecdc4, #67e6dc);">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name">Language Tutor</h3>
+                        <p class="character-tagline">A patient language teacher who helps you learn new languages through conversation.</p>
+                        <div class="character-stats">
+                            <div class="stat">
+                                <i class="fas fa-comments"></i>
+                                <span>5.4k</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="character-tags">
+                            <span class="character-tag">Learning</span>
+                            <span class="character-tag">Languages</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="character-card-explore">
+                    <div class="character-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name">History Buff</h3>
+                        <p class="character-tagline">A history teacher who makes the past come alive with fascinating stories.</p>
+                        <div class="character-stats">
+                            <div class="stat">
+                                <i class="fas fa-comments"></i>
+                                <span>5.1k</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <div class="character-tags">
+                            <span class="character-tag">Educational</span>
+                            <span class="character-tag">History</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-robot"></i>
+                        <span>ChatVerse</span>
+                    </div>
+                    <p>Connect, create, and chat with AI characters. Anytime. Anywhere.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="explore.html?category=funny">Funny Characters</a></li>
+                        <li><a href="explore.html?category=educational">Educational</a></li>
+                        <li><a href="explore.html?category=storytelling">Storytelling</a></li>
+                        <li><a href="explore.html?category=games">Games</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new characters and features.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 ChatVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/character.js"></script>
+</body>
+</html>

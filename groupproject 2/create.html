@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Character - ChatVerse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>ChatVerse</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore Characters</a></li>
+                    <li class="nav-item"><a href="create.html" class="nav-link active">Create</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="auth.html" class="nav-link auth-btn">Login/Sign Up</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Create Hero Section -->
+    <section class="create-hero">
+        <div class="container">
+            <div class="create-hero-content">
+                <h1>Bring Your AI Character to Life</h1>
+                <p>Design a unique AI personality that reflects your vision. Create companions, teachers, storytellers, or any character you can imagine!</p>
+                <div class="creation-stats">
+                    <div class="stat">
+                        <span class="stat-number">15,842</span>
+                        <span class="stat-label">Characters Created</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.7</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Creator Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create-hero-visual">
+            <div class="floating-character">
+                <div class="character-preview">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creation Process Section -->
+    <section class="creation-process">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Follow these simple steps to create your perfect AI character</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose Name & Avatar</h3>
+                        <p>Give your character an identity. Select a name and choose or create an avatar that represents their personality.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Define Personality</h3>
+                        <p>Describe how your character acts, speaks, and thinks. Set their tone, mannerisms, and behavioral traits.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Add Example Conversations</h3>
+                        <p>Provide sample dialogues to train your character's response style and conversation patterns.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Publish & Share</h3>
+                        <p>Make your character available to chat with and share it with the community or keep it private.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Creation Form -->
+    <section class="character-creation">
+        <div class="container">
+            <div class="creation-form-container">
+                <form class="character-form" id="characterForm">
+                    <!-- Progress Bar -->
+                    <div class="form-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-steps">
+                            <div class="progress-step active" data-step="1">Basic Info</div>
+                            <div class="progress-step" data-step="2">Personality</div>
+                            <div class="progress-step" data-step="3">Conversations</div>
+                            <div class="progress-step" data-step="4">Review</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Basic Information -->
+                    <div class="form-step active" id="step1">
+                        <h2>Basic Information</h2>
+                        <p>Let's start with the basics. Give your character an identity.</p>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="characterName">Character Name *</label>
+                                <input type="text" id="characterName" name="characterName" required placeholder="e.g., Luna the Explorer">
+                                <span class="help-text">Choose a memorable name that reflects your character's personality</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="characterTagline">Tagline *</label>
+                                <input type="text" id="characterTagline" name="characterTagline" required placeholder="e.g., An adventurous space explorer who loves sharing cosmic facts">
+                                <span class="help-text">A short description that appears on your character's profile</span>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Avatar Selection</label>
+                                <div class="avatar-options">
+                                    <div class="avatar-option selected" data-avatar="robot">
+                                        <div class="avatar-preview">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <span>Robot</span>
+                                    </div>
+                                    <div class="avatar-option" data-avatar="user">
+                                        <div class="avatar-preview">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Human</span>
+                                    </div>
+                                    <div class="avatar-option" data-avatar="cat">
+                                        <div class="avatar-preview">
+                                            <i class="fas fa-cat"></i>
+                                        </div>
+                                        <span>Animal</span>
+                                    </div>
+                                    <div class="avatar-option" data-avatar="wizard">
+                                        <div class="avatar-preview">
+                                            <i class="fas fa-hat-wizard"></i>
+                                        </div>
+                                        <span>Fantasy</span>
+                                    </div>
+                                    <div class="avatar-option" data-avatar="alien">
+                                        <div class="avatar-preview">
+                                            <i class="fas fa-user-astronaut"></i>
+                                        </div>
+                                        <span>Alien</span>
+                                    </div>
+                                    <div class="avatar-option" data-avatar="custom">
+                                        <div class="avatar-preview">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <span>Custom</span>
+                                    </div>
+                                </div>
+                                <span class="help-text">Choose an avatar style that represents your character</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="characterCategory">Category *</label>
+                                <select id="characterCategory" name="characterCategory" required>
+                                    <option value="">Select a category</option>
+                                    <option value="funny">Funny</option>
+                                    <option value="educational">Educational</option>
+                                    <option value="storytelling">Storytelling</option>
+                                    <option value="games">Games</option>
+                                    <option value="romantic">Romantic</option>
+                                    <option value="helpful">Helpful</option>
+                                    <option value="learning">Learning</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="characterColor">Color Theme</label>
+                                <div class="color-picker">
+                                    <div class="color-option selected" style="background: #6d5dfc;" data-color="#6d5dfc"></div>
+                                    <div class="color-option" style="background: #ff7eb3;" data-color="#ff7eb3"></div>
+                                    <div class="color-option" style="background: #42e2b8;" data-color="#42e2b8"></div>
+                                    <div class="color-option" style="background: #ffb347;" data-color="#ffb347"></div>
+                                    <div class="color-option" style="background: #a166ab;" data-color="#a166ab"></div>
+                                    <div class="color-option" style="background: #4ecdc4;" data-color="#4ecdc4"></div>
+                                </div>
+                                <input type="hidden" id="characterColor" name="characterColor" value="#6d5dfc">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary next-step" data-next="2">Continue to Personality</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Personality -->
+                    <div class="form-step" id="step2">
+                        <h2>Define Personality</h2>
+                        <p>Describe how your character behaves, speaks, and interacts.</p>
+                        
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="personalityDescription">Personality Description *</label>
+                                <textarea id="personalityDescription" name="personalityDescription" required rows="4" placeholder="Describe your character's personality, mannerisms, speech patterns, and behavioral traits..."></textarea>
+                                <span class="help-text">Be specific about how your character should act and speak</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="conversationStyle">Conversation Style *</label>
+                                <select id="conversationStyle" name="conversationStyle" required>
+                                    <option value="">Select a style</option>
+                                    <option value="friendly">Friendly & Casual</option>
+                                    <option value="professional">Professional & Formal</option>
+                                    <option value="humorous">Humorous & Witty</option>
+                                    <option value="educational">Educational & Informative</option>
+                                    <option value="storytelling">Storytelling & Narrative</option>
+                                    <option value="supportive">Supportive & Empathetic</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="knowledgeDomain">Knowledge Domain</label>
+                                <select id="knowledgeDomain" name="knowledgeDomain">
+                                    <option value="">General Knowledge</option>
+                                    <option value="science">Science & Technology</option>
+                                    <option value="history">History & Culture</option>
+                                    <option value="literature">Literature & Arts</option>
+                                    <option value="sports">Sports & Entertainment</option>
+                                    <option value="philosophy">Philosophy & Psychology</option>
+                                    <option value="custom">Custom Domain</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Personality Traits</label>
+                                <div class="traits-selector">
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-curious" name="traits" value="curious">
+                                        <label for="trait-curious">Curious</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-funny" name="traits" value="funny">
+                                        <label for="trait-funny">Funny</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-wise" name="traits" value="wise">
+                                        <label for="trait-wise">Wise</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-energetic" name="traits" value="energetic">
+                                        <label for="trait-energetic">Energetic</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-calm" name="traits" value="calm">
+                                        <label for="trait-calm">Calm</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-sarcastic" name="traits" value="sarcastic">
+                                        <label for="trait-sarcastic">Sarcastic</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-enthusiastic" name="traits" value="enthusiastic">
+                                        <label for="trait-enthusiastic">Enthusiastic</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-patient" name="traits" value="patient">
+                                        <label for="trait-patient">Patient</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-adventurous" name="traits" value="adventurous">
+                                        <label for="trait-adventurous">Adventurous</label>
+                                    </div>
+                                    <div class="trait-option">
+                                        <input type="checkbox" id="trait-creative" name="traits" value="creative">
+                                        <label for="trait-creative">Creative</label>
+                                    </div>
+                                </div>
+                                <span class="help-text">Select traits that define your character's personality</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="1">Back</button>
+                            <button type="button" class="btn btn-primary next-step" data-next="3">Continue to Conversations</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Example Conversations -->
+                    <div class="form-step" id="step3">
+                        <h2>Example Conversations</h2>
+                        <p>Provide sample dialogues to train your character's response style.</p>
+                        
+                        <div class="conversation-examples">
+                            <div class="conversation-example">
+                                <div class="example-header">
+                                    <h4>Example Conversation 1</h4>
+                                    <button type="button" class="btn-remove-example" style="display: none;">Remove</button>
+                                </div>
+                                <div class="form-group">
+                                    <label>User Message</label>
+                                    <input type="text" class="user-message" placeholder="What would a user say to your character?">
+                                </div>
+                                <div class="form-group">
+                                    <label>Character Response</label>
+                                    <textarea class="character-response" rows="3" placeholder="How should your character respond?"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="conversation-example">
+                                <div class="example-header">
+                                    <h4>Example Conversation 2</h4>
+                                    <button type="button" class="btn-remove-example" style="display: none;">Remove</button>
+                                </div>
+                                <div class="form-group">
+                                    <label>User Message</label>
+                                    <input type="text" class="user-message" placeholder="What would a user say to your character?">
+                                </div>
+                                <div class="form-group">
+                                    <label>Character Response</label>
+                                    <textarea class="character-response" rows="3" placeholder="How should your character respond?"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="conversation-example">
+                                <div class="example-header">
+                                    <h4>Example Conversation 3</h4>
+                                    <button type="button" class="btn-remove-example" style="display: none;">Remove</button>
+                                </div>
+                                <div class="form-group">
+                                    <label>User Message</label>
+                                    <input type="text" class="user-message" placeholder="What would a user say to your character?">
+                                </div>
+                                <div class="form-group">
+                                    <label>Character Response</label>
+                                    <textarea class="character-response" rows="3" placeholder="How should your character respond?"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn-outline" id="addConversationExample">
+                            <i class="fas fa-plus"></i> Add Another Example
+                        </button>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="2">Back</button>
+                            <button type="button" class="btn btn-primary next-step" data-next="4">Review Character</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review & Publish -->
+                    <div class="form-step" id="step4">
+                        <h2>Review Your Character</h2>
+                        <p>Check everything looks perfect before publishing your character.</p>
+                        
+                        <div class="character-preview-card">
+                            <div class="preview-header">
+                                <div class="preview-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="preview-info">
+                                    <h3 id="previewName">Character Name</h3>
+                                    <p id="previewTagline">Character tagline will appear here</p>
+                                    <div class="preview-tags">
+                                        <span class="tag" id="previewCategory">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="preview-details">
+                                <div class="preview-section">
+                                    <h4>Personality</h4>
+                                    <p id="previewPersonality">Personality description will appear here</p>
+                                </div>
+                                
+                                <div class="preview-section">
+                                    <h4>Conversation Style</h4>
+                                    <p id="previewStyle">Conversation style will appear here</p>
+                                </div>
+                                
+                                <div class="preview-section">
+                                    <h4>Example Conversations</h4>
+                                    <div id="previewConversations">
+                                        <p>Example conversations will appear here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="publish-options">
+                            <div class="form-group">
+                                <label for="visibility">Visibility</label>
+                                <select id="visibility" name="visibility">
+                                    <option value="public">Public - Anyone can chat with your character</option>
+                                    <option value="unlisted">Unlisted - Only people with the link can chat</option>
+                                    <option value="private">Private - Only you can chat with your character</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#">Terms of Service</a> and confirm I have the rights to create this character
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="3">Back</button>
+                            <button type="submit" class="btn btn-primary" id="publishCharacter">
+                                <i class="fas fa-rocket"></i> Publish Character
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Section -->
+    <section class="inspiration">
+        <div class="container">
+            <h2 class="section-title">Need Inspiration?</h2>
+            <p class="section-subtitle">Check out these popular character types created by our community</p>
+            
+            <div class="inspiration-grid">
+                <div class="inspiration-card">
+                    <div class="inspiration-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educational Characters</h3>
+                    <p>Create teachers, professors, or experts in specific fields who can educate and inform users.</p>
+                    <ul>
+                        <li>Science teachers</li>
+                        <li>History experts</li>
+                        <li>Language tutors</li>
+                    </ul>
+                </div>
+                
+                <div class="inspiration-card">
+                    <div class="inspiration-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Entertainment Characters</h3>
+                    <p>Design funny, witty, or entertaining personalities for casual conversations and fun interactions.</p>
+                    <ul>
+                        <li>Comedians</li>
+                        <li>Storytellers</li>
+                        <li>Game companions</li>
+                    </ul>
+                </div>
+                
+                <div class="inspiration-card">
+                    <div class="inspiration-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Support Characters</h3>
+                    <p>Build empathetic, supportive companions who can listen, advise, and provide emotional support.</p>
+                    <ul>
+                        <li>Mental health supporters</li>
+                        <li>Life coaches</li>
+                        <li>Friendship companions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-robot"></i>
+                        <span>ChatVerse</span>
+                    </div>
+                    <p>Connect, create, and chat with AI characters. Anytime. Anywhere.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="explore.html?category=funny">Funny Characters</a></li>
+                        <li><a href="explore.html?category=educational">Educational</a></li>
+                        <li><a href="explore.html?category=storytelling">Storytelling</a></li>
+                        <li><a href="explore.html?category=games">Games</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new characters and features.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 ChatVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/create.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Characters - ChatVerse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>ChatVerse</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link active">Explore Characters</a></li>
+                    <li class="nav-item"><a href="create.html" class="nav-link">Create</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="auth.html" class="nav-link auth-btn">Login/Sign Up</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Explore Hero Section -->
+    <section class="explore-hero">
+        <div class="container">
+            <div class="explore-hero-content">
+                <h1>Discover Amazing AI Characters</h1>
+                <p>Browse through thousands of unique AI personalities. Find your perfect chat companion!</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="characterSearch" placeholder="Search characters by name, personality, or category...">
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+                
+                <!-- Quick Filter Tags -->
+                <div class="quick-filters">
+                    <span class="filter-tag active" data-category="all">All Characters</span>
+                    <span class="filter-tag" data-category="funny">Funny</span>
+                    <span class="filter-tag" data-category="educational">Educational</span>
+                    <span class="filter-tag" data-category="storytelling">Storytelling</span>
+                    <span class="filter-tag" data-category="games">Games</span>
+                    <span class="filter-tag" data-category="romantic">Romantic</span>
+                    <span class="filter-tag" data-category="helpful">Helpful</span>
+                    <span class="filter-tag" data-category="learning">Learning</span>
+                </div>
+            </div>
+        </div>
+        <div class="explore-hero-bg">
+            <div class="bg-particle"></div>
+            <div class="bg-particle"></div>
+            <div class="bg-particle"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="explore-main">
+        <div class="container">
+            <div class="explore-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="funny" checked>
+                                <span class="checkmark"></span>
+                                Funny
+                                <span class="count">128</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="educational" checked>
+                                <span class="checkmark"></span>
+                                Educational
+                                <span class="count">96</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="storytelling" checked>
+                                <span class="checkmark"></span>
+                                Storytelling
+                                <span class="count">87</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="games" checked>
+                                <span class="checkmark"></span>
+                                Games
+                                <span class="count">64</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="romantic">
+                                <span class="checkmark"></span>
+                                Romantic
+                                <span class="count">42</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="helpful">
+                                <span class="checkmark"></span>
+                                Helpful
+                                <span class="count">78</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="learning">
+                                <span class="checkmark"></span>
+                                Learning
+                                <span class="count">53</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Popularity</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="popularity" value="all" checked>
+                                <span class="radiomark"></span>
+                                All Characters
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="popularity" value="trending">
+                                <span class="radiomark"></span>
+                                Trending Now
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="popularity" value="popular">
+                                <span class="radiomark"></span>
+                                Most Popular
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="popularity" value="new">
+                                <span class="radiomark"></span>
+                                New Characters
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Interaction Level</h3>
+                        <div class="filter-range">
+                            <div class="range-labels">
+                                <span>Casual</span>
+                                <span>Deep</span>
+                            </div>
+                            <input type="range" min="1" max="5" value="3" class="interaction-range">
+                            <div class="range-value">Medium</div>
+                        </div>
+                    </div>
+                    
+                    <button class="apply-filters-btn">Apply Filters</button>
+                    <button class="reset-filters-btn">Reset All</button>
+                </aside>
+
+                <!-- Characters Grid -->
+                <section class="characters-section">
+                    <div class="section-header">
+                        <h2>All Characters <span class="result-count">(247 characters)</span></h2>
+                        <div class="sort-options">
+                            <select id="sortSelect">
+                                <option value="popular">Most Popular</option>
+                                <option value="newest">Newest First</option>
+                                <option value="name">Name A-Z</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="characters-grid" id="charactersGrid">
+                        <!-- Character cards will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Load More Button -->
+                    <div class="load-more-container">
+                        <button class="btn btn-outline" id="loadMoreBtn">Load More Characters</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-robot"></i>
+                        <span>ChatVerse</span>
+                    </div>
+                    <p>Connect, create, and chat with AI characters. Anytime. Anywhere.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="explore.html?category=funny">Funny Characters</a></li>
+                        <li><a href="explore.html?category=educational">Educational</a></li>
+                        <li><a href="explore.html?category=storytelling">Storytelling</a></li>
+                        <li><a href="explore.html?category=games">Games</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new characters and features.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 ChatVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/explore.js"></script>
+</body>
+</html>
